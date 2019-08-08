@@ -17,6 +17,7 @@ public class Secandlargest {
 		
 		utility.sorting(array);
 		scanner.close();
+		scanner.close();
 		
 		
 		

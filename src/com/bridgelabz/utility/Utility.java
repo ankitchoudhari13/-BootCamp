@@ -100,9 +100,12 @@ public class Utility {
 	public void amount(float principal, float intrest, float year) {
 		float n=12*year;
 		float r=intrest/(12*100);
-	
-		System.out.println("calculates the monthly payments\"payment=principal*intrest/1-1+r^-n\"are "+r+" "+n);
 		
+		  double payment  = (principal * r) / (1 - Math.pow(1+r, -n));
+	        double interest = payment * n - principal;
+	
+		System.out.println(payment);
+		System.out.println(intrest);
 	}
 
 	public void temcon(double fahrenheit, double celsius) {
@@ -139,6 +142,7 @@ public class Utility {
 		for(int i =0;i<=10;i++) {
 System.out.println(+i+" "+power);
 			power=2*power;
+			
 			
 		}
 		
@@ -204,45 +208,61 @@ System.out.println(+i+" "+power);
 		
 		}
 
-	public void check(int number) {
+	public void check(int firstnumber,int secandnumber) {
+		int number;
+		int startindex = 0;
+		int endindex = 0;
+		int count=0;
+		for(number=startindex;number<=endindex;number++) {
+			count=0;
+		
 	for(int i=2;i<=number;i++)
 	
-	if(  number%i==0) 
-	
-		System.out.println("not primne number");
-	
-	else
-	{
-		System.out.println("prime number");
+	if(  number%i==0) {
+		count++;
+		break;}}
+		if(count==0&&number !=1) {
+			System.out.println(number);
 	}
+	
+		
 	
 	}
 
 	public void conv(float number,String x) {
 		
-		while(number>0) {
-			float a = number%2;
-			if(a==1)
-			{
-                int count = 0;
-				count++;
-            }
-            x = x+"" +a;
-            System.out.println("enter the binary number:"+x);
-		}
+		  int power = 1;
+	        while (power <= number/2) {
+	            power *= 2;
+	        }
+	        while (power > 0) {
+
+	            // power is not present in n 
+	            if (number < power) {
+	                System.out.print(0);
+	            }
+	            else {
+	                System.out.print(1);
+	                number =number- power;
+	            }power =power/ 2;
+	            
+	        }
+
+	      
+
+	
 		
 	}
 
-	public void taylor(int number, double angle) {
+	public void taylor( double angle) {
 	double t=1;double sum=0;
 		angle=(angle*3.14/180);
 		
-		angle=t;
-		sum=angle;
-		for(int i=1;i<=number;i++) {
+		
+		for(int i=1;i<=t;i++) {
 			t=(t*(-1)*angle*angle)/(2*i*(2*i+1));
 			sum=angle+t;
-			System.out.println("enter the tay"+angle+""+sum);
+			System.out.println(angle+""+sum);
 		}
 		
 	}
@@ -292,20 +312,34 @@ System.out.println(+i+" "+power);
 			System.out.println("Year " + year + " is not a leap year");
 	}
 
-	public void fact(int number) {
-		for(int i=2;i<number;i++) {
-			while(number%i==0) {
-				System.out.println(i+"");
-				number=number%i;
-			}
-		}
-		if(number>2) 
-			System.out.println(number);
-		
-			
+	public void fact(int num, int fact) {
+		 for(int i=1; i<=num; i++)
+	        {
+	            fact = fact*i;
+	        }
+	        
+	        System.out.println(num+" "+fact);
 		
 	}
 
+	public void newt(  double c)
+	{
+	double epsilon = 1e-15; 
+		
+		double t=c;
+		while(Math.abs(t-c/t) > epsilon*t) {
+		 t = (c/t + t) / 2.0;
+		 System.out.println(t);
+		
+	}
+	}}
+	
+		
+		
+			
+		
+	
+
 	
 		
 		
@@ -317,4 +351,4 @@ System.out.println(+i+" "+power);
 	
 	
 
-}
+

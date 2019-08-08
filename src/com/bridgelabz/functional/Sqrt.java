@@ -14,12 +14,12 @@ public class Sqrt {
 		 
 		Scanner scanner=new Scanner(System.in);
 		Utility utility=new Utility();
-		int number;
-		
-		System.out.println("enter the number");
-		number=scanner.nextInt();
+	
+		double c;
+	System.out.println("enter the number");
+		c=scanner.nextInt();
 
-		utility.newt(number);
+		utility.newt(c);
 		scanner.close();
 	}
 

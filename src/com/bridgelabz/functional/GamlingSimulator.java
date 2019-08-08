@@ -23,6 +23,7 @@ stake=scanner.nextInt();
 System.out.println("enter the number time goal");
 number=scanner.nextInt();
 utility.game(goal,stake,number);
+scanner.close();
 
 	}
 

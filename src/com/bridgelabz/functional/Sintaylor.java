@@ -11,17 +11,16 @@ public class Sintaylor {
 Scanner scanner=new Scanner(System.in);
 Utility utility=new Utility();
 
-int number;
+
 float angle;
 
-System.out.println("enter the number");
-number=scanner.nextInt();
+
 
 System.out.println("enter the angle");
 angle=scanner.nextFloat();
 
-utility.taylor(number,angle);
- 
+utility.taylor(angle);
+ scanner.close();
 	}
 
 }

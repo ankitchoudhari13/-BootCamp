@@ -10,10 +10,9 @@ public class Binary {
 		// TODO Auto-generated method stub
 Scanner scanner=new Scanner(System.in);
 Utility  utility=new Utility();
-float number;
-String x = "";
+int number;
 System.out.println("enter the decimal number");
-number=scanner.nextFloat();
+number=scanner.nextInt();
 
 utility.conv(number,"");
 	}

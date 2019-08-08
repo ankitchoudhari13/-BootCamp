@@ -10,11 +10,14 @@ public class Prime {
 		// TODO Auto-generated method stub
 		Scanner scanner=new Scanner(System.in);
 		Utility utility=new Utility();
-		int number;
+		int firstnumber;
+		int secandnumber;
 		System.out.println("enter the number");
-		number=scanner.nextInt();
+		firstnumber=scanner.nextInt();
+		secandnumber=scanner.nextInt();
 		
-		utility.check(number);
+		
+		utility.check(firstnumber,secandnumber);
 		scanner.close();
 	}
 
