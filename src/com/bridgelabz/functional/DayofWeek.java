@@ -17,10 +17,10 @@ Utility utility=new Utility();
  int y=0;
  
  
- System.out.println("enter the month");
+ System.out.println("enter the day");
  d=scanner.nextInt();
  
- System.out.println("enter the day");
+ System.out.println("enter the month");
  m=scanner.nextInt();
  
  System.out.println("enter the year");
